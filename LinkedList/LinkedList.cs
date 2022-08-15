@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace ReversedLinkedList
+namespace LinkedList
 {
     internal class LinkedList : ListRecursion
     {

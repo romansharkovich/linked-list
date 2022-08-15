@@ -1,4 +1,4 @@
-﻿namespace ReversedLinkedList
+﻿namespace LinkedList
 {
     class ListRecursion
     {

@@ -2,10 +2,11 @@
 {
     public class Node
     {
-        public int data;
-        public Node next;
+        public int data { get; set; }
+        public Node next { get; set; }
         // binaary tree
-        public Node left, right;
+        public Node left { get; set; }
+        public Node right { get; set; }
         public Node(int item)
         {
             data = item;

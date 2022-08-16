@@ -1,14 +1,14 @@
 ﻿namespace LinkedList
 {
-    internal class PreorderTraversal : ListRecursion
+    internal class PreorderTraversal : LinkedList
     {
-        public void traversalPreorder()
+        public void TraversalPreorder()
         {
-            traversalPreorder(headItem);
+            TraversalPreorder(headItem);
         }
 
         // Preorder traversal without recursion 
-        public void traversalPreorder(Node node)
+        public void TraversalPreorder(Node node)
         {
             while (node != null)
             {
@@ -34,19 +34,19 @@
             }
         }
 
-        public void preorder()
+        public void Preorder()
         {
-            preorder(headItem);
+            Preorder(headItem);
         }
 
         // standart preorder traversal 
-        public void preorder(Node node)
+        public void Preorder(Node node)
         {
             if (node != null)
             {
                 Console.Write(node.data + " ");
-                preorder(node.left);
-                preorder(node.right);
+                Preorder(node.left);
+                Preorder(node.right);
             }
         }
     }

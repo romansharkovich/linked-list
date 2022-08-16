@@ -3,8 +3,26 @@ using System.Diagnostics;
 
 namespace LinkedList
 {
-    internal class LinkedList : ListRecursion
+    class LinkedList
     {
+        public Node headItem;
+        public void Print()
+        {
+            Node temp = headItem;
+            while (temp != null)
+            {
+                Console.Write(temp.data + " ");
+                temp = temp.next;
+            }
+            Console.WriteLine();
+        }
+
+        public void Push(int data)
+        {
+            Node temp = new Node(data);
+            temp.next = headItem;
+            headItem = temp;
+        }
         public int GetMth(int index)
         {
             Node current = headItem;
@@ -17,7 +35,7 @@ namespace LinkedList
                 current = current.next;
             }
 
-            Debug.Assert(false);
+            /*Debug.Assert(false);*/
             return 0;
         }
     }

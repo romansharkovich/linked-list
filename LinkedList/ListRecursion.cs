@@ -1,4 +1,4 @@
-﻿namespace LinkedList
+﻿namespace LinkedListSpace
 {
     internal class ListRecursion : LinkedList
     {
@@ -8,7 +8,7 @@
                 headItem.next == null)
                 return headItem;
 
-            Node rest = Reverse(headItem.next);
+            var rest = Reverse(headItem.next);
             headItem.next.next = headItem;
 
             headItem.next = null;

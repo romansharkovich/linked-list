@@ -1,4 +1,4 @@
-﻿namespace LinkedList
+﻿namespace LinkedListSpace
 {
     public class Node
     {

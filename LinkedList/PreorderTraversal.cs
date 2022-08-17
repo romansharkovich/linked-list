@@ -1,14 +1,14 @@
-﻿namespace LinkedList
+﻿namespace LinkedListSpace
 {
-    internal class PreorderTraversal : LinkedList
+    internal class SearchTree : LinkedList
     {
-        public void TraversalPreorder()
+        public void BinarySearchTree()
         {
-            TraversalPreorder(headItem);
+            BinarySearchTree(headItem);
         }
 
         // Preorder traversal without recursion 
-        public void TraversalPreorder(Node node)
+        public void BinarySearchTree(Node node)
         {
             while (node != null)
             {
@@ -16,7 +16,7 @@
                     Console.Write(node.data + " ");
                     node = node.right;
                 } else {
-                    Node current = node.left;
+                    var current = node.left;
                     while (current.right != null &&
                            current.right != node) {
                         current = current.right;
@@ -34,19 +34,19 @@
             }
         }
 
-        public void Preorder()
+        public void BinarySearchDefault()
         {
-            Preorder(headItem);
+            BinarySearchDefault(headItem);
         }
 
-        // standart preorder traversal 
-        public void Preorder(Node node)
+        // standart preorder traversal binary search
+        public void BinarySearchDefault(Node node)
         {
             if (node != null)
             {
                 Console.Write(node.data + " ");
-                Preorder(node.left);
-                Preorder(node.right);
+                BinarySearchDefault(node.left);
+                BinarySearchDefault(node.right);
             }
         }
     }

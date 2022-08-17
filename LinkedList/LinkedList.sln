@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList", "LinkedList.csproj", "{F866717C-46E4-4C4B-9C4E-46A6F8E1F112}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsLinkedList", "..\TestsLinkedList\TestsLinkedList.csproj", "{B6DBBD03-74CF-4D5D-BE36-A197BEF692ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F866717C-46E4-4C4B-9C4E-46A6F8E1F112}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F866717C-46E4-4C4B-9C4E-46A6F8E1F112}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F866717C-46E4-4C4B-9C4E-46A6F8E1F112}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6DBBD03-74CF-4D5D-BE36-A197BEF692ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6DBBD03-74CF-4D5D-BE36-A197BEF692ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6DBBD03-74CF-4D5D-BE36-A197BEF692ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6DBBD03-74CF-4D5D-BE36-A197BEF692ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

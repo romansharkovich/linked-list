@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace LinkedList
+namespace LinkedListSpace
 {
     public class Program
     {
         public static void Main(String[] args)
         {
             // mth elemnt to m
-            LinkedList linkedList = new LinkedList();
+            var linkedList = new LinkedList();
 
             linkedList.Push(4);
             linkedList.Push(3);
@@ -33,8 +33,8 @@ namespace LinkedList
             Console.WriteLine("linked list after: ");
             recursion.Print();
 
-            // traversal preorder
-            PreorderTraversal tree = new PreorderTraversal();
+            // traversal preorder binary search tree without recursion
+            var tree = new SearchTree();
             tree.headItem = new Node(0);
             tree.headItem.left = new Node(1);
             tree.headItem.right = new Node(2);
@@ -46,9 +46,11 @@ namespace LinkedList
             tree.headItem.left.left.right = new Node(8);
             tree.headItem.left.right.left = new Node(9);
             tree.headItem.left.right.right = new Node(10);
-            tree.TraversalPreorder();
+            
+            tree.BinarySearchTree();
             Console.WriteLine("");
-            tree.Preorder();
+            
+            tree.BinarySearchDefault();
         }
     }
 }

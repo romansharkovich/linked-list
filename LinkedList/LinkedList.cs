@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace LinkedList
+namespace LinkedListSpace
 {
     class LinkedList
     {
         public Node headItem;
         public void Print()
         {
-            Node temp = headItem;
+            var temp = headItem;
             while (temp != null)
             {
                 Console.Write(temp.data + " ");
@@ -19,14 +19,14 @@ namespace LinkedList
 
         public void Push(int data)
         {
-            Node temp = new Node(data);
+            var temp = new Node(data);
             temp.next = headItem;
             headItem = temp;
         }
         public int GetMth(int index)
         {
-            Node current = headItem;
-            int count = 0;
+            var current = headItem;
+            var count = 0;
             while (current != null)
             {
                 if (count == index)
@@ -34,8 +34,6 @@ namespace LinkedList
                 count++;
                 current = current.next;
             }
-
-            /*Debug.Assert(false);*/
             return 0;
         }
     }

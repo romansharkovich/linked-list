@@ -1,17 +1,14 @@
 ﻿namespace LinkedListSpace
 {
-    public class Node
+    public class Node<T>
     {
-        public int data { get; set; }
-        public Node next { get; set; }
-        // binaary tree
-        public Node left { get; set; }
-        public Node right { get; set; }
-        public Node(int item)
+        public T data { get; set; }
+        public Node<T> next { get; set; }
+
+        public Node(T item)
         {
             data = item;
             next = null;
-            left = right = null;
         }
     }
 }

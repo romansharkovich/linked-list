@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LinkedListSpace
+﻿namespace LinkedListSpace
 {
     public class Program
     {
@@ -19,33 +17,39 @@ namespace LinkedListSpace
             Console.WriteLine("Element at index 4 is " + linkedList.GetMth(4));
 
             // recursion
-            var recursion = new ListRecursion();
+            var reverse = new ListReverse();
 
-            recursion.Push(13);
-            recursion.Push(23);
-            recursion.Push(35);
-            recursion.Push(53);
-            recursion.Push(54);
+            reverse.Push(13);
+            reverse.Push(23);
+            reverse.Push(35);
+            reverse.Push(53);
+            reverse.Push(54);
 
             Console.WriteLine("linked list before: ");
-            recursion.Print();
-            recursion.headItem = recursion.Reverse(recursion.headItem);
-            Console.WriteLine("linked list after: ");
-            recursion.Print();
-
+            reverse.Print();
+            reverse.ReverseWithoutRecursion();
+            Console.WriteLine("linked list after reverse: ");
+            reverse.Print();
+            reverse.headItem = reverse.ReverseRecursion(reverse.headItem);
+            Console.WriteLine("linked list after reverse recursion: ");
+            reverse.Print();
+            var getReverseList = reverse.ReverseImmutable();
+            Console.WriteLine("linked list after reverse immutable: ");
+            getReverseList.Print();
+            
             // traversal preorder binary search tree without recursion
             var tree = new SearchTree();
-            tree.headItem = new Node(0);
-            tree.headItem.left = new Node(1);
-            tree.headItem.right = new Node(2);
-            tree.headItem.left.left = new Node(3);
-            tree.headItem.left.right = new Node(4);
-            tree.headItem.right.left = new Node(5);
-            tree.headItem.right.right = new Node(6);
-            tree.headItem.left.left.left = new Node(7);
-            tree.headItem.left.left.right = new Node(8);
-            tree.headItem.left.right.left = new Node(9);
-            tree.headItem.left.right.right = new Node(10);
+            tree.headItem = new NodeForSearch(0);
+            tree.headItem.left = new NodeForSearch(1);
+            tree.headItem.right = new NodeForSearch(2);
+            tree.headItem.left.left = new NodeForSearch(3);
+            tree.headItem.left.right = new NodeForSearch(4);
+            tree.headItem.right.left = new NodeForSearch(5);
+            tree.headItem.right.right = new NodeForSearch(6);
+            tree.headItem.left.left.left = new NodeForSearch(7);
+            tree.headItem.left.left.right = new NodeForSearch(8);
+            tree.headItem.left.right.left = new NodeForSearch(9);
+            tree.headItem.left.right.right = new NodeForSearch(10);
             
             tree.BinarySearchTree();
             Console.WriteLine("");

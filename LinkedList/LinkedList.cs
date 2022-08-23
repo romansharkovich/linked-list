@@ -5,7 +5,7 @@ namespace LinkedListSpace
 {
     class LinkedList
     {
-        public Node headItem;
+        public Node<int> headItem;
         public void Print()
         {
             var temp = headItem;
@@ -19,10 +19,11 @@ namespace LinkedListSpace
 
         public void Push(int data)
         {
-            var temp = new Node(data);
+            var temp = new Node<int>(data);
             temp.next = headItem;
             headItem = temp;
         }
+        
         public int GetMth(int index)
         {
             var current = headItem;

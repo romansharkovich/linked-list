@@ -1,14 +1,15 @@
 ﻿namespace LinkedListSpace
 {
-    internal class SearchTree : LinkedList
+    internal class SearchTree
     {
+        public NodeForSearch headItem { get; set; }
         public void BinarySearchTree()
         {
             BinarySearchTree(headItem);
         }
 
         // Preorder traversal without recursion 
-        public void BinarySearchTree(Node node)
+        public void BinarySearchTree(NodeForSearch node)
         {
             while (node != null)
             {
@@ -40,7 +41,7 @@
         }
 
         // standart preorder traversal binary search
-        public void BinarySearchDefault(Node node)
+        public void BinarySearchDefault(NodeForSearch node)
         {
             if (node != null)
             {

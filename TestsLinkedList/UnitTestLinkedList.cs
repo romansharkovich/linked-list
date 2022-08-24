@@ -71,26 +71,25 @@ namespace TestsLinkedList
         {
             // Arrange
             var tree = new SearchTree();
-            tree.headItem = new NodeForSearch(0);
-            tree.headItem.left = new NodeForSearch(1);
-            tree.headItem.right = new NodeForSearch(2);
-            tree.headItem.left.left = new NodeForSearch(3);
-            tree.headItem.left.right = new NodeForSearch(4);
-            tree.headItem.right.left = new NodeForSearch(5);
-            tree.headItem.right.right = new NodeForSearch(6);
-            tree.headItem.left.left.left = new NodeForSearch(7);
-            tree.headItem.left.left.right = new NodeForSearch(8);
-            tree.headItem.left.right.left = new NodeForSearch(9);
-            tree.headItem.left.right.right = new NodeForSearch(10);
 
             // Action
-            tree.BinarySearchTree();
+            var resultList = tree.BinarySearchTree();
+            for (var i = 10; i < 100; i += 10)
+                tree.Insert(i);
 
             // Assert
-            Assert.AreEqual(0, tree.headItem.data);
-            Assert.AreEqual(1, tree.headItem.left.data);
-            Assert.AreEqual(2, tree.headItem.right.data);
-            Assert.AreEqual(3, tree.headItem.left.left.data);
+            var a = 10;
+            foreach (var i in resultList)
+                Assert.AreNotEqual(a+10, i);
+
+            // Action
+            for (var i = 10; i < 100; i += 20)
+                tree.Delete(i);
+
+            // Assert
+            a = 10;
+            foreach (var i in resultList)
+                Assert.AreNotEqual(a + 10, i);
         }
     }
 }

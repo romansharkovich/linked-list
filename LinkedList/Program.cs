@@ -39,22 +39,18 @@
             
             // traversal preorder binary search tree without recursion
             var tree = new SearchTree();
-            tree.headItem = new NodeForSearch(0);
-            tree.headItem.left = new NodeForSearch(1);
-            tree.headItem.right = new NodeForSearch(2);
-            tree.headItem.left.left = new NodeForSearch(3);
-            tree.headItem.left.right = new NodeForSearch(4);
-            tree.headItem.right.left = new NodeForSearch(5);
-            tree.headItem.right.right = new NodeForSearch(6);
-            tree.headItem.left.left.left = new NodeForSearch(7);
-            tree.headItem.left.left.right = new NodeForSearch(8);
-            tree.headItem.left.right.left = new NodeForSearch(9);
-            tree.headItem.left.right.right = new NodeForSearch(10);
-            
+
+            for (var i = 1; i < 6; i++)
+                tree.Insert(i);
+
+            var resultList = tree.BinarySearchTree();
+            Console.WriteLine("");
+
+            tree.Delete(5);
+            Console.WriteLine( "Inorder traversal of the modified tree: ");
+
             tree.BinarySearchTree();
             Console.WriteLine("");
-            
-            tree.BinarySearchDefault();
         }
     }
 }
